@@ -1,0 +1,25 @@
+Factory
+- vanilla 
+(see https://alvinalexander.com/java/java-factory-pattern-example)
+java -jar vanilla-1.0.0-SNAPSHOT.jar "Phillip" "Bugs Bunny"
+ Eeee, what's up Phillip ?
+
+
+Plugable factory ?
+
+
+- spi
+-- contract
+-- engine
+-- impl1
+-- impl2
+
+- ejb
+- cdi
+- jtoggles ?
+
+Definition
+Dynamic
+
+
+Example: Analytics ? Quote ? Language ?

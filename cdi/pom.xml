@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.phillip-kruger</groupId>
+        <artifactId>dynamic-example</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+    <groupId>com.github.phillip-kruger.factory</groupId>
+    <artifactId>cdi</artifactId>
+    <packaging>pom</packaging>
+    
+    <properties>
+        <cdi.version>2.0</cdi.version>
+        <weld.version>3.0.2.Final</weld.version>
+    </properties>
+    
+    <modules>
+        <module>cdi-api</module>
+        <module>cdi-impl-afrikaans</module>
+        <module>cdi-impl-bugsbunny</module>
+        <module>cdi-engine</module>
+    </modules>
+    
+    <dependencies>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>${cdi.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se-shaded</artifactId>
+            <version>3.0.0.Final</version>
+        </dependency>
+
+<!--        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se-core</artifactId>
+            <version>${weld.version}</version>
+        </dependency>-->
+    </dependencies>
+    
+</project>

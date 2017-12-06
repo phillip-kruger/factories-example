@@ -3,30 +3,30 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.phillip-kruger.factory</groupId>
-        <artifactId>spi</artifactId>
+        <artifactId>cdi</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
     
-    <artifactId>spi-engine</artifactId>
+    <artifactId>cdi-engine</artifactId>
     <packaging>jar</packaging>
     
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>spi-api</artifactId>
+            <artifactId>cdi-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>spi-impl-afrikaans</artifactId>
+            <artifactId>cdi-impl-afrikaans</artifactId>
             <version>${project.version}</version>
         </dependency>
         
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>spi-impl-bugsbunny</artifactId>
+            <artifactId>cdi-impl-bugsbunny</artifactId>
             <version>${project.version}</version>
         </dependency>
         
@@ -62,14 +62,13 @@
                         </goals>
                         <configuration>
                             <arguments>
-                                <argument>Phillip</argument>  
+                                <argument>Phillip</argument>   
                                 <argument>English</argument> 
                                 <argument>Afrikaans</argument>   
                                 <argument>Bugs Bunny</argument>   
                             </arguments>
                         </configuration>
                     </execution>
-                    
                 </executions>
                 <configuration>
                     <includeProjectDependencies>true</includeProjectDependencies>
@@ -80,10 +79,10 @@
                     </executableDependency>
                     <mainClass>com.github.phillipkruger.factory.GreetingService</mainClass>
                     <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                    
                 </configuration>
             </plugin>
             
         </plugins>
     </build>
-    
 </project>

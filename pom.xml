@@ -35,7 +35,7 @@
     <modules>
         <module>vanilla</module>
         <module>spi</module>
-        
+        <module>cdi</module>
     </modules>
     
     <properties>

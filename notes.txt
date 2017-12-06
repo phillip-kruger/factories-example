@@ -1,6 +1,8 @@
 Factory
 - vanilla 
 (see https://alvinalexander.com/java/java-factory-pattern-example)
+
+
 java -jar vanilla-1.0.0-SNAPSHOT.jar "Phillip" "Bugs Bunny"
  Eeee, what's up Phillip ?
 
@@ -14,12 +16,19 @@ Plugable factory ?
 -- impl1
 -- impl2
 
-- ejb
+CDI on SE http://www.mastertheboss.com/jboss-frameworks/cdi/building-a-cdi-2-standalone-java-application
+http://www.adam-bien.com/roller/abien/entry/injecting_classes_in_java_se
+https://dzone.com/articles/contexts-and-dependency-injection
 - cdi
+
+Enterprise ?
+
+
+- ejb
 - jtoggles ?
 
 Definition
-Dynamic
+Dynamic (osgi ?)
 
 
 Example: Analytics ? Quote ? Language ?

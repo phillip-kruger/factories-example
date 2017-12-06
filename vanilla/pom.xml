@@ -21,7 +21,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                com.github.phillipkruger.factory.vanilla.GreetingService
+                                com.github.phillipkruger.factory.GreetingService
                             </mainClass>
                         </manifest>
                     </archive>
@@ -33,42 +33,21 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <executions>
-                    
                     <execution>
-                        <id>default</id>
-                        <phase>integration-test</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                    
-                    <execution>
-                        <id>afrikaans</id>
                         <phase>integration-test</phase>
                         <goals>
                             <goal>java</goal>
                         </goals>
                         <configuration>
                             <arguments>
-                                <argument>Phillip</argument>   
+                                <argument>Phillip</argument>  
+                                <argument>English</argument> 
                                 <argument>Afrikaans</argument>   
-                            </arguments>
-                        </configuration>
-                    </execution>
-                    
-                    <execution>
-                        <id>bugsbunny</id>
-                        <phase>integration-test</phase>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>
-                                <argument>Phillip</argument>   
                                 <argument>Bugs Bunny</argument>   
                             </arguments>
                         </configuration>
                     </execution>
+
                 </executions>
                 <configuration>
                     <includeProjectDependencies>true</includeProjectDependencies>
@@ -77,7 +56,8 @@
                         <groupId>${project.groupId}</groupId>
                         <artifactId>${project.artifactId}</artifactId>
                     </executableDependency>
-                    <mainClass>com.github.phillipkruger.factory.vanilla.GreetingService</mainClass>
+                    <mainClass>com.github.phillipkruger.factory.GreetingService</mainClass>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
                 </configuration>
             </plugin>
             

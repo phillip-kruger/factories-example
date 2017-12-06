@@ -25,3 +25,9 @@ hs_err_pid*
 /spi/spi-engine/target/
 /spi/spi-impl-bugsbunny/target/
 /spi/spi-impl-afrikaans/target/
+/cdi/spi-api/target/
+/cdi/spi-engine/target/
+/cdi/cdi-api/target/
+/cdi/cdi-impl-afrikaans/target/
+/cdi/cdi-impl-bugsbunny/target/
+/cdi/cdi-engine/target/

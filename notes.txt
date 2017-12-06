@@ -1,3 +1,6 @@
+
+Definition
+
 Factory
 - vanilla 
 (see https://alvinalexander.com/java/java-factory-pattern-example)
@@ -21,14 +24,17 @@ http://www.adam-bien.com/roller/abien/entry/injecting_classes_in_java_se
 https://dzone.com/articles/contexts-and-dependency-injection
 - cdi
 
-Enterprise ?
 
+
+
+Enterprise ?
+localhost:8080/ee-engine/api/Phillip?way=English&way=Afrikaans&way=Bugs Bunny
 
 - ejb
 - jtoggles ?
 
-Definition
+
 Dynamic (osgi ?)
 
 
-Example: Analytics ? Quote ? Language ?
+

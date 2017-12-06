@@ -7,8 +7,8 @@ import javax.enterprise.context.RequestScoped;
  * English implementation (Default)
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  */
-@GreetingProvider("English")
 @RequestScoped
+@GreetingProvider("English")
 public class English implements Greeting {
 
     @Override

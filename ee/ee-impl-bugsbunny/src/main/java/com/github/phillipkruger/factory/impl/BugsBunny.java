@@ -3,21 +3,24 @@ package com.github.phillipkruger.factory.impl;
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.api.GreetingProvider;
 import javax.enterprise.context.RequestScoped;
+
 /**
- * English implementation (Default)
+ * Bugs Bunny implementation
+ * @see https://www.youtube.com/watch?v=UeVtZjGII-I
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  */
-@GreetingProvider("English")
 @RequestScoped
-public class English implements Greeting {
+@GreetingProvider("Bugs Bunny")
+public class BugsBunny implements Greeting {
 
     @Override
     public String sayHello(String to) {
-        return "Good day " + to + ".";
+        if(to==null || to.isEmpty())to = "Doc";
+        return "Eeee, what's up " + to + " ?";
     }
-
+    
     @Override
     public String getName() {
-        return "English";
+        return "Bugs Bunny";
     }
 }

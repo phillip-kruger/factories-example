@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import lombok.extern.java.Log;
+import org.jboss.weld.context.RequestContext;
+import org.jboss.weld.context.unbound.UnboundLiteral;
 
 @Log
 public class GreetingService {
@@ -12,6 +14,10 @@ public class GreetingService {
     public static void main(String[] args){
         
         try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
+            // So that we can use @RequestScope
+            RequestContext requestContext= container.select(RequestContext.class, UnboundLiteral.INSTANCE).get();
+            requestContext.activate();
+            
             GreetingFactory factory = container.select(GreetingFactory.class).get();
             printGreetings(factory, args);
         }

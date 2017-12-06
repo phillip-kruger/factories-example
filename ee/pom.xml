@@ -8,31 +8,27 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>com.github.phillip-kruger.factory</groupId>
-    <artifactId>cdi</artifactId>
+    <artifactId>ee</artifactId>
     <packaging>pom</packaging>
     
     <properties>
-        <cdi.version>2.0</cdi.version>
-        <weld.version>3.0.2.Final</weld.version>
+        <jee.version>7.0</jee.version>
     </properties>
     
     <modules>
-        <module>cdi-api</module>
-        <module>cdi-impl-afrikaans</module>
-        <module>cdi-impl-bugsbunny</module>
-        <module>cdi-engine</module>
+        <module>ee-api</module>
+        <module>ee-impl-afrikaans</module>
+        <module>ee-impl-bugsbunny</module>
+        <module>ee-engine</module>
     </modules>
     
     <dependencies>
+        <!-- Jave ee -->
         <dependency>
-            <groupId>javax.enterprise</groupId>
-            <artifactId>cdi-api</artifactId>
-            <version>${cdi.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.weld.se</groupId>
-            <artifactId>weld-se-shaded</artifactId>
-            <version>3.0.0.Final</version>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jee.version}</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

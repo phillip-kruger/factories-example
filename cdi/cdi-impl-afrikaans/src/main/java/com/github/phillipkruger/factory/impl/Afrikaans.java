@@ -2,6 +2,7 @@ package com.github.phillipkruger.factory.impl;
 
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.api.GreetingProvider;
+import javax.enterprise.context.RequestScoped;
 
 /**
  * Implementation for Afrikaans
@@ -9,6 +10,7 @@ import com.github.phillipkruger.factory.api.GreetingProvider;
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  */
 @GreetingProvider("Afrikaans")
+@RequestScoped
 public class Afrikaans implements Greeting {
 
     @Override

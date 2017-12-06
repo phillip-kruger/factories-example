@@ -2,6 +2,7 @@ package com.github.phillipkruger.factory.impl;
 
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.api.GreetingProvider;
+import javax.enterprise.context.RequestScoped;
 
 /**
  * Bugs Bunny implementation
@@ -9,6 +10,7 @@ import com.github.phillipkruger.factory.api.GreetingProvider;
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  */
 @GreetingProvider("Bugs Bunny")
+@RequestScoped
 public class BugsBunny implements Greeting {
 
     @Override

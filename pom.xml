@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>com.github.phillip-kruger</groupId>
-    <artifactId>dynamic-example</artifactId>
+    <artifactId>factories-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     
-    <url>https://github.com/phillip-kruger/dynamic-example</url>
-    <description>Example application to demonstrate some options to load impl dynamically</description>
+    <url>https://github.com/phillip-kruger/factories-example</url>
+    <description>Example applications to demonstrate some options to implement factories</description>
     
     <licenses>
         <license>
@@ -20,8 +20,8 @@
     </licenses>
     
     <scm>
-        <connection>scm:git:https://github.com/phillip-kruger/dynamic-example.git</connection>
-        <url>https://github.com/phillip-kruger/dynamic-example</url>
+        <connection>scm:git:https://github.com/phillip-kruger/factories-example.git</connection>
+        <url>https://github.com/phillip-kruger/factories-example</url>
     </scm>
 
     <developers>

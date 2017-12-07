@@ -8,11 +8,11 @@ import java.util.Map;
 import java.util.ServiceLoader;
 
 public class GreetingFactory {
-    private final ServiceLoader<Greeting> loader = ServiceLoader.load(Greeting.class);
     
     private final Map<String,Greeting> loadedGreetings = new HashMap<>();
     
     public GreetingFactory(){
+        ServiceLoader<Greeting> loader = ServiceLoader.load(Greeting.class);
         Iterator<Greeting> greetingIterator = loader.iterator();
         while (greetingIterator.hasNext()) {
             Greeting greeting = greetingIterator.next();

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.phillip-kruger.factory</groupId>
+        <artifactId>swarm-ejb</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+    
+    <artifactId>swarm-ejb-engine</artifactId>
+    <packaging>war</packaging>
+    
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        
+        <!-- Wildfly properties -->
+        <wildfly.version>2017.11.0</wildfly.version>
+        
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.wildfly.swarm</groupId>
+                <artifactId>bom-all</artifactId>
+                <version>${wildfly.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>swarm-ejb-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>swarm-ejb-impl-afrikaans</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>swarm-ejb-impl-bugsbunny</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+    </dependencies>
+    
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        
+        <plugins>
+            
+            <plugin>
+                <groupId>org.wildfly.swarm</groupId>
+                <artifactId>wildfly-swarm-plugin</artifactId>
+                <version>${wildfly.version}</version>
+                <executions>
+                    <execution>
+                        <id>1</id>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>2</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>4</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <properties>
+                        <swarm.context.path>/${project.artifactId}</swarm.context.path>
+                    </properties>
+                    <hollow>true</hollow>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <groupId>com.googlecode.maven-download-plugin</groupId>
+                <artifactId>download-maven-plugin</artifactId>
+                <version>1.4.0</version>
+                <executions>
+                    <execution>
+                        <id>3</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>wget</goal>
+                        </goals>
+                        <configuration>
+                            <overwrite>true</overwrite>
+                            <skipCache>true</skipCache>
+                            <url>http://localhost:8080/swarm-ejb-engine/api/Phillip?way=English&amp;way=Afrikaans&amp;way=BugsBunny</url>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+              
+        </plugins>
+                
+    </build>
+    
+</project>

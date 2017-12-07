@@ -8,7 +8,7 @@ import com.github.phillipkruger.factory.impl.English;
 public class GreetingFactory {
 
     public Greeting getGreeting(String name){
-        if(name.equalsIgnoreCase("Bugs Bunny")){
+        if(name.equalsIgnoreCase("BugsBunny")){
             return new BugsBunny();
         }else if(name.equalsIgnoreCase("Afrikaans")){
             return new Afrikaans();

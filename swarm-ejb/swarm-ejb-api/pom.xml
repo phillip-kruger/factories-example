@@ -3,18 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.phillip-kruger.factory</groupId>
-        <artifactId>spi</artifactId>
+        <artifactId>swarm-ejb</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
-    <artifactId>spi-impl-bugsbunny</artifactId>
+    <artifactId>swarm-ejb-api</artifactId>
     <packaging>jar</packaging>
-    
-    <dependencies>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>spi-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 </project>

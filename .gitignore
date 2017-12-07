@@ -31,3 +31,16 @@ hs_err_pid*
 /cdi/cdi-impl-afrikaans/target/
 /cdi/cdi-impl-bugsbunny/target/
 /cdi/cdi-engine/target/
+/liberty-cdi/liberty-cdi-api/target/
+/liberty-cdi/liberty-cdi-engine/target/
+/liberty-cdi/liberty-cdi-impl-bugsbunny/target/
+/liberty-cdi/liberty-cdi-impl-afrikaans/target/
+/ejb/swarm-ejb-impl-bugsbunny/target/
+/spi/swarm-spi-impl-bugsbunny/target/
+/ejb/swarm-ejb-impl-afrikaans/target/
+/ejb/swarm-ejb-api/target/
+/ejb/swarm-ejb-engine/target/
+/swarm-ejb/swarm-ejb-api/target/
+/swarm-ejb/swarm-ejb-engine/target/
+/swarm-ejb/swarm-ejb-impl-afrikaans/target/
+/swarm-ejb/swarm-ejb-impl-bugsbunny/target/

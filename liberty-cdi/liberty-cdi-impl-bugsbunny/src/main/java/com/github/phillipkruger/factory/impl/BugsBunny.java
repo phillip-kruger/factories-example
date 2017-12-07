@@ -9,8 +9,8 @@ import javax.enterprise.context.RequestScoped;
  * @see https://www.youtube.com/watch?v=UeVtZjGII-I
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  */
-@GreetingProvider("BugsBunny")
 @RequestScoped
+@GreetingProvider("BugsBunny")
 public class BugsBunny implements Greeting {
 
     @Override

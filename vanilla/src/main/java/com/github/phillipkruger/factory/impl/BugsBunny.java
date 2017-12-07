@@ -19,6 +19,6 @@ public class BugsBunny implements Greeting {
     
     @Override
     public String getName() {
-        return "Bugs Bunny";
+        return "BugsBunny";
     }
 }

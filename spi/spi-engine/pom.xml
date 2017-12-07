@@ -65,7 +65,7 @@
                                 <argument>Phillip</argument>  
                                 <argument>English</argument> 
                                 <argument>Afrikaans</argument>   
-                                <argument>Bugs Bunny</argument>   
+                                <argument>BugsBunny</argument>   
                             </arguments>
                         </configuration>
                     </execution>

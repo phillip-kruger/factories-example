@@ -8,14 +8,29 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>com.github.phillip-kruger.factory</groupId>
-    <artifactId>spi</artifactId>
+    <artifactId>swarm-ejb</artifactId>
     <packaging>pom</packaging>
     
+    <properties>
+        <jee.version>7.0</jee.version>
+    </properties>
+    
     <modules>
-        <module>spi-api</module>
-        <module>spi-impl-afrikaans</module>
-        <module>spi-engine</module>
-        <module>spi-impl-bugsbunny</module>
+        <module>swarm-ejb-impl-bugsbunny</module>
+        <module>swarm-ejb-impl-afrikaans</module>
+        <module>swarm-ejb-api</module>
+        <module>swarm-ejb-engine</module>
     </modules>
+    
+    <dependencies>
+        <!-- Jave ee -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
     
 </project>

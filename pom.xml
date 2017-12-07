@@ -36,7 +36,8 @@
         <module>vanilla</module>
         <module>spi</module>
         <module>cdi</module>
-        <module>ee</module>
+        <module>liberty-cdi</module>
+        <module>swarm-ejb</module>
     </modules>
     
     <properties>

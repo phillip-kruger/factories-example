@@ -33,8 +33,7 @@ localhost:8080/ee-engine/api/Phillip?way=English&way=Afrikaans&way=Bugs Bunny
 - ejb
 - jtoggles ?
 
-
 Dynamic (osgi ?)
 
-
+Remove cached map
 

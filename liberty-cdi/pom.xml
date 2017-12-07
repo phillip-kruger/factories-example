@@ -17,9 +17,9 @@
     
     <modules>
         <module>liberty-cdi-api</module>
-        <module>liberty-cdi-engine</module>
         <module>liberty-cdi-impl-bugsbunny</module>
         <module>liberty-cdi-impl-afrikaans</module>
+        <module>liberty-cdi-engine</module>
     </modules>
     
     <dependencies>

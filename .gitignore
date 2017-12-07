@@ -44,3 +44,8 @@ hs_err_pid*
 /swarm-ejb/swarm-ejb-engine/target/
 /swarm-ejb/swarm-ejb-impl-afrikaans/target/
 /swarm-ejb/swarm-ejb-impl-bugsbunny/target/
+/dynamic-spi/dynamic-spi-impl-bugsbunny/target/
+/dynamic-spi/dynamic-spi-impl-afrikaans/target/
+/dynamic-spi/dynamic-spi-engine/target/
+/dynamic-spi/dynamic-spi-api/target/
+/dynamic-spi/target/

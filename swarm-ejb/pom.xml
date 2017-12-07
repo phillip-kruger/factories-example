@@ -16,9 +16,9 @@
     </properties>
     
     <modules>
-        <module>swarm-ejb-impl-bugsbunny</module>
-        <module>swarm-ejb-impl-afrikaans</module>
         <module>swarm-ejb-api</module>
+        <module>swarm-ejb-impl-afrikaans</module>
+        <module>swarm-ejb-impl-bugsbunny</module>
         <module>swarm-ejb-engine</module>
     </modules>
     

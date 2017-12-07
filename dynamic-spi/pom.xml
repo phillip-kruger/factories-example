@@ -8,14 +8,14 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>com.github.phillip-kruger.factory</groupId>
-    <artifactId>spi</artifactId>
+    <artifactId>dynamic-spi</artifactId>
     <packaging>pom</packaging>
     
     <modules>
-        <module>spi-api</module>
-        <module>spi-impl-afrikaans</module>
-        <module>spi-impl-bugsbunny</module>
-        <module>spi-engine</module>
+        <module>dynamic-spi-api</module>
+        <module>dynamic-spi-impl-afrikaans</module>
+        <module>dynamic-spi-impl-bugsbunny</module>
+        <module>dynamic-spi-engine</module>
     </modules>
     
 </project>

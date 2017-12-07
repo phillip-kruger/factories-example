@@ -33,6 +33,11 @@ Enterprise ?
 localhost:8080/ee-engine/api/Phillip?way=English&way=Afrikaans&way=Bugs Bunny
 
 - ejb
+
+- dynamic spi ?
+https://stackoverflow.com/questions/16102010/dynamically-loading-plugin-jars-using-serviceloader
+
+
 - jtoggles ?
 
 Dynamic (osgi ?)

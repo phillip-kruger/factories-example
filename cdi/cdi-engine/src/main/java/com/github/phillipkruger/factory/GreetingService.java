@@ -1,7 +1,10 @@
 package com.github.phillipkruger.factory;
 
 import com.github.phillipkruger.factory.api.Greeting;
+import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import lombok.extern.java.Log;
@@ -19,37 +22,40 @@ public class GreetingService {
             requestContext.activate();
             
             GreetingFactory factory = container.select(GreetingFactory.class).get();
-            printGreetings(factory, args);
+            
+            String greetings = getGreetings(factory, Arrays.asList(args));
+            
+            log.severe(greetings);
         }
     }
     
-    private static void printGreetings(GreetingFactory factory,String[] args){
-        String waysToGreet[] = getGreetingImpl(args);
+    
+    private static String getGreetings(GreetingFactory factory,List<String> args){
+        List<String> waysToGreet = getGreetingImpl(args);
         
+        StringWriter sw = new StringWriter();
+        sw.write("\n");
         for(String wayToGreet:waysToGreet){
             Greeting greeting = factory.getGreeting(wayToGreet);
         
             String to = getTo(args);
             String hello = greeting.sayHello(to);
-        
-            log.severe(hello);
+            sw.write(hello);
+            sw.write("\n");
         }
+        return sw.toString();
     }
     
-    private static String getTo(String[] args){
-        if(args.length>0)return args[0];
+    private static String getTo(List<String> args){
+        if(args.size()>0)return args.get(0);
         return "World";
     }
     
-    private static String[] getGreetingImpl(String[] args){
-        if(args.length>1){
-            ArrayList<String> ways = new ArrayList<>();
-            for(int i=1;i<args.length;i++){
-                ways.add(args[i]);
-            }
-            return ways.toArray(new String[]{});
+    private static List<String> getGreetingImpl(List<String> args){
+        if(args.size()>1){
+            return args.subList(1, args.size());
         }
-        return new String[]{"English"}; // default
+        return new ArrayList<>();
     }
     
 }

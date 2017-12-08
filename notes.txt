@@ -45,3 +45,6 @@ Dynamic (osgi ?)
 Remove cached map
 
 Open-Close principle ?
+
+Make all way list rather than array
+Return json on REST ?

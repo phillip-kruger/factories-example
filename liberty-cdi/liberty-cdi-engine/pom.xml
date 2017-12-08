@@ -151,7 +151,7 @@
                                 
                                 <loadfile srcfile="${project.build.directory}/liberty/wlp/usr/servers/defaultServer/logs/messages.log" property="serverlog">
                                     <filterchain>
-                                        <tailfilter lines="3"/>
+                                        <tailfilter lines="4"/>
                                     </filterchain>
                                 </loadfile>
                                 

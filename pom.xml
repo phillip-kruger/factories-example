@@ -39,6 +39,7 @@
         <module>liberty-cdi</module>
         <module>swarm-ejb</module>
         <module>dynamic-spi</module>
+        <module>payara-cdi</module>
     </modules>
     
     <properties>

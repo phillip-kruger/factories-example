@@ -8,7 +8,7 @@
         <relativePath>../</relativePath>
     </parent>
     <groupId>com.github.phillip-kruger.factory</groupId>
-    <artifactId>liberty-cdi</artifactId>
+    <artifactId>payara-cdi</artifactId>
     <packaging>pom</packaging>
     
     <properties>
@@ -16,10 +16,10 @@
     </properties>
     
     <modules>
-        <module>liberty-cdi-api</module>
-        <module>liberty-cdi-impl-bugsbunny</module>
-        <module>liberty-cdi-impl-afrikaans</module>
-        <module>liberty-cdi-engine</module>
+        <module>payara-cdi-api</module>
+        <module>payara-cdi-impl-bugsbunny</module>
+        <module>payara-cdi-impl-afrikaans</module>
+        <module>payara-cdi-engine</module>
     </modules>
     
     <dependencies>

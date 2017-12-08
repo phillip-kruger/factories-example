@@ -49,3 +49,7 @@ hs_err_pid*
 /dynamic-spi/dynamic-spi-engine/target/
 /dynamic-spi/dynamic-spi-api/target/
 /dynamic-spi/target/
+/payara-cdi/payara-cdi-api/target/
+/payara-cdi/payara-cdi-impl-afrikaans/target/
+/payara-cdi/payara-cdi-impl-bugsbunny/target/
+/payara-cdi/payara-cdi-engine/target/

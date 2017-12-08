@@ -44,3 +44,4 @@ Dynamic (osgi ?)
 
 Remove cached map
 
+Open-Close principle ?

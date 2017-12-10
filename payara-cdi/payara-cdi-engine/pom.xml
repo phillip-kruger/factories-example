@@ -31,12 +31,12 @@
             <version>${project.version}</version>
         </dependency>
         
-        <dependency>
+<!--        <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>payara-cdi-impl-bugsbunny</artifactId>
             <version>${project.version}</version>
         </dependency>
-        
+        -->
         <dependency>
             <groupId>fish.payara.extras</groupId>
             <artifactId>payara-micro</artifactId>
@@ -56,41 +56,61 @@
                 <version>${payaramicro.maven.plugin.version}</version>
                 <executions>
                     <execution>
+                        <id>1</id>
                         <phase>pre-integration-test</phase>
                         <goals>
+                            <goal>bundle</goal>
                             <goal>start</goal>
                         </goals>
                     </execution>
+                    
                 </executions>
                 <configuration>
-                    <!--<useUberJar>true</useUberJar>-->
-                    <daemon>false</daemon>
-                    <!--<javaPath>/path/to/Java/Home</javaPath>-->
-                    <!--<payaraMicroAbsolutePath>/path/to/payara-micro.jar</payaraMicroAbsolutePath>-->
+                    <daemon>true</daemon>
+                    <deployWar>true</deployWar>
+                    <commandLineOptions>
+                        <option>
+                            <key>--autoBindHttp</key>
+                            <value>true</value>
+                        </option>
+                        <option>
+                            <key>--autobindssl</key>
+                            <value>true</value>
+                        </option>
+                        
+                        <option>
+                            <key>--logtofile</key>
+                            <value>/tmp/payara.log</value>
+                        </option>
+                    </commandLineOptions>
                     <artifactItem>
                         <groupId>fish.payara.extras</groupId>
                         <artifactId>payara-micro</artifactId>
                         <version>${payara.version}</version>
                     </artifactItem>
-                    <deployWar>true</deployWar>
-                    <copySystemProperties>true</copySystemProperties>
-                    <commandLineOptions>
-<!--                        <option>
-                            <key>-domainconfig</key>
-                            <value>/path/to/domain.xml</value>
-                        </option>-->
-                        <option>
-                            <key>--autoBindHttp</key>
-                            <value>true</value>
-                        </option>
-                    </commandLineOptions>
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <configuration>
+                    <tasks>
+                        <sleep seconds="12" />
+                    </tasks>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>2</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
-            
-            
-<!--            <plugin>
+            <plugin>
                 <groupId>com.googlecode.maven-download-plugin</groupId>
                 <artifactId>download-maven-plugin</artifactId>
                 <version>1.4.0</version>
@@ -108,39 +128,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>-->
-              
-<!--            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <id>4</id>
-                        <phase>integration-test</phase>
-                        
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        
-                        <configuration>
-
-                            <target>
-                                
-                                <loadfile srcfile="${project.build.directory}/liberty/wlp/usr/servers/defaultServer/logs/messages.log" property="serverlog">
-                                    <filterchain>
-                                        <tailfilter lines="3"/>
-                                    </filterchain>
-                                </loadfile>
-                                
-                                <echo message="${serverlog}"/>
-                            </target>
-
-                        </configuration>
-                        
-                    </execution>
-                </executions>
-            </plugin>-->
+            </plugin>
               
         </plugins>
                 

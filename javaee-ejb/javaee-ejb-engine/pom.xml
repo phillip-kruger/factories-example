@@ -13,7 +13,8 @@
     
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <rest.url>http://localhost:8080/javaee-ejb-engine/api/Phillip?way=English&amp;way=Afrikaans&amp;way=BugsBunny</rest.url>
+        <rest.hello.url>http://localhost:8080/javaee-ejb-engine/api/Phillip</rest.hello.url>
+        <rest.ways.url>http://localhost:8080/javaee-ejb-engine/api</rest.ways.url>
     </properties>
     
     <dependencies>
@@ -141,7 +142,19 @@
                                 <configuration>
                                     <overwrite>true</overwrite>
                                     <skipCache>true</skipCache>
-                                    <url>${rest.url}</url>
+                                    <url>${rest.ways.url}</url>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>4</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <overwrite>true</overwrite>
+                                    <skipCache>true</skipCache>
+                                    <url>${rest.hello.url}</url>
                                 </configuration>
                             </execution>
                         </executions>
@@ -166,7 +179,7 @@
 
                                         <loadfile srcfile="${project.build.directory}/liberty/wlp/usr/servers/defaultServer/logs/messages.log" property="serverlog">
                                             <filterchain>
-                                                <tailfilter lines="4"/>
+                                                <tailfilter lines="12"/>
                                             </filterchain>
                                         </loadfile>
 
@@ -282,7 +295,19 @@
                                 <configuration>
                                     <overwrite>true</overwrite>
                                     <skipCache>true</skipCache>
-                                    <url>${rest.url}</url>
+                                    <url>${rest.ways.url}</url>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>4</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <overwrite>true</overwrite>
+                                    <skipCache>true</skipCache>
+                                    <url>${rest.hello.url}</url>
                                 </configuration>
                             </execution>
                         </executions>
@@ -367,7 +392,19 @@
                                 <configuration>
                                     <overwrite>true</overwrite>
                                     <skipCache>true</skipCache>
-                                    <url>${rest.url}</url>
+                                    <url>${rest.ways.url}</url>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>4</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <overwrite>true</overwrite>
+                                    <skipCache>true</skipCache>
+                                    <url>${rest.hello.url}</url>
                                 </configuration>
                             </execution>
                         </executions>

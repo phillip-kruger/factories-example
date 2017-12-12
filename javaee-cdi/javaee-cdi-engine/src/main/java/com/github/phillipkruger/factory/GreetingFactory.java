@@ -2,7 +2,6 @@ package com.github.phillipkruger.factory;
 
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.api.GreetingProviderLiteral;
-import com.github.phillipkruger.factory.impl.English;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -23,7 +22,7 @@ public class GreetingFactory {
             Greeting provider = instance.get();
             return provider;
         }else{
-            return new English();
+            return getGreeting("English"); // default        
         }
     }
     

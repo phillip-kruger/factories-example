@@ -1,10 +1,8 @@
 package com.github.phillipkruger.factory;
 
 import com.github.phillipkruger.factory.api.Greeting;
-import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
 import javax.inject.Inject;
 import javax.json.Json;
 import javax.json.JsonArray;

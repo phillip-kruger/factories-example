@@ -36,9 +36,9 @@
         <module>vanilla</module>
         <module>spi</module>
         <module>cdi</module>
-        <module>swarm-ejb</module>
         <module>dynamic-spi</module>
         <module>javaee-cdi</module>
+        <module>javaee-ejb</module>
     </modules>
     
     <properties>

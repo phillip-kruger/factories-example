@@ -61,3 +61,7 @@ hs_err_pid*
 /javaee-cdi/javaee-cdi-engine/target/
 /javaee-cdi/javaee-cdi-impl-afrikaans/target/
 /javaee-cdi/javaee-cdi-impl-bugsbunny/target/
+/javaee-ejb/javaee-ejb-engine/target/
+/javaee-ejb/javaee-ejb-impl-bugsbunny/target/
+/javaee-ejb/javaee-ejb-impl-afrikaans/target/
+/javaee-ejb/javaee-ejb-api/target/

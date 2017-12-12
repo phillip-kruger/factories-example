@@ -3,42 +3,43 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.phillip-kruger.factory</groupId>
-        <artifactId>javaee-cdi</artifactId>
+        <artifactId>javaee-ejb</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
     
-    <artifactId>javaee-cdi-engine</artifactId>
+    <artifactId>javaee-ejb-engine</artifactId>
     <packaging>war</packaging>
     
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <rest.url>http://localhost:8080/javaee-cdi-engine/api/Phillip?way=English&amp;way=Afrikaans&amp;way=BugsBunny</rest.url>
+        <rest.url>http://localhost:8080/javaee-ejb-engine/api/Phillip?way=English&amp;way=Afrikaans&amp;way=BugsBunny</rest.url>
     </properties>
     
     <dependencies>
+        
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>javaee-cdi-api</artifactId>
+            <artifactId>javaee-ejb-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>javaee-cdi-impl-afrikaans</artifactId>
+            <artifactId>javaee-ejb-impl-afrikaans</artifactId>
             <version>${project.version}</version>
         </dependency>
         
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>javaee-cdi-impl-bugsbunny</artifactId>
+            <artifactId>javaee-ejb-impl-bugsbunny</artifactId>
             <version>${project.version}</version>
         </dependency>
         
     </dependencies>
     
     <build>
-        <finalName>${project.artifactId}</finalName>
+        <finalName>${project.artifactId}</finalName>    
     </build>
     
     <profiles>
@@ -378,4 +379,5 @@
             
         </profile>
     </profiles>
+    
 </project>

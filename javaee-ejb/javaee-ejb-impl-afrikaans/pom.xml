@@ -3,17 +3,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.phillip-kruger.factory</groupId>
-        <artifactId>swarm-ejb</artifactId>
+        <artifactId>javaee-ejb</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
-    <artifactId>swarm-ejb-impl-afrikaans</artifactId>
+    <artifactId>javaee-ejb-impl-afrikaans</artifactId>
     <packaging>jar</packaging>
     
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>swarm-ejb-api</artifactId>
+            <artifactId>javaee-ejb-api</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

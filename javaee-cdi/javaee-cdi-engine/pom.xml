@@ -13,7 +13,8 @@
     
     <properties>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <rest.url>http://localhost:8080/javaee-cdi-engine/api/Phillip?way=English&amp;way=Afrikaans&amp;way=BugsBunny</rest.url>
+        <rest.hello.url>http://localhost:8080/javaee-cdi-engine/api/Phillip</rest.hello.url>
+        <rest.ways.url>http://localhost:8080/javaee-cdi-engine/api</rest.ways.url>
     </properties>
     
     <dependencies>
@@ -140,7 +141,19 @@
                                 <configuration>
                                     <overwrite>true</overwrite>
                                     <skipCache>true</skipCache>
-                                    <url>${rest.url}</url>
+                                    <url>${rest.ways.url}</url>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>4</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <overwrite>true</overwrite>
+                                    <skipCache>true</skipCache>
+                                    <url>${rest.hello.url}</url>
                                 </configuration>
                             </execution>
                         </executions>
@@ -152,7 +165,7 @@
                         <version>1.8</version>
                         <executions>
                             <execution>
-                                <id>4</id>
+                                <id>5</id>
                                 <phase>integration-test</phase>
 
                                 <goals>
@@ -165,7 +178,7 @@
 
                                         <loadfile srcfile="${project.build.directory}/liberty/wlp/usr/servers/defaultServer/logs/messages.log" property="serverlog">
                                             <filterchain>
-                                                <tailfilter lines="4"/>
+                                                <tailfilter lines="12"/>
                                             </filterchain>
                                         </loadfile>
 
@@ -281,7 +294,19 @@
                                 <configuration>
                                     <overwrite>true</overwrite>
                                     <skipCache>true</skipCache>
-                                    <url>${rest.url}</url>
+                                    <url>${rest.ways.url}</url>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>4</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <overwrite>true</overwrite>
+                                    <skipCache>true</skipCache>
+                                    <url>${rest.hello.url}</url>
                                 </configuration>
                             </execution>
                         </executions>
@@ -337,7 +362,7 @@
                                 </goals>
                             </execution>
                             <execution>
-                                <id>4</id>
+                                <id>5</id>
                                 <phase>post-integration-test</phase>
                                 <goals>
                                     <goal>stop</goal>
@@ -366,7 +391,19 @@
                                 <configuration>
                                     <overwrite>true</overwrite>
                                     <skipCache>true</skipCache>
-                                    <url>${rest.url}</url>
+                                    <url>${rest.ways.url}</url>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>4</id>
+                                <phase>integration-test</phase>
+                                <goals>
+                                    <goal>wget</goal>
+                                </goals>
+                                <configuration>
+                                    <overwrite>true</overwrite>
+                                    <skipCache>true</skipCache>
+                                    <url>${rest.hello.url}</url>
                                 </configuration>
                             </execution>
                         </executions>
@@ -374,6 +411,46 @@
 
                 </plugins>
 
+            </build>
+            
+        </profile>
+        
+        <profile>
+            <id>tomee</id>
+            <activation>
+                <property>
+                    <name>tomee</name>
+                </property>
+            </activation>
+            
+            <properties>
+                <tomee.version>1.7.5</tomee.version>
+            </properties>
+            
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.openejb.maven</groupId>
+                        <artifactId>tomee-maven-plugin</artifactId>
+                        <version>1.7.5</version>
+                        <configuration>
+                            <tomeeVersion>${tomee.version}</tomeeVersion>
+                            <tomeeClassifier>plus</tomeeClassifier>
+                            <apps>
+                                <app>${project.groupId}:${project.artifactId}:${project.version}:${project.packaging}</app>
+                            </apps>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>1</id>
+                                <goals>
+                                    <goal>start</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                      </plugin>
+                    
+                </plugins>
             </build>
             
         </profile>

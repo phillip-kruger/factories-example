@@ -1,6 +1,7 @@
 package com.github.phillipkruger.factory;
 
 import com.github.phillipkruger.factory.api.Greeting;
+import java.util.List;
 import java.util.logging.Level;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -26,4 +27,8 @@ public class GreetingFactory {
             return english;
         }   
     }
+    
+//    public List<Greeting> getAllGreetings(){
+//        throw new 
+//    }
 }

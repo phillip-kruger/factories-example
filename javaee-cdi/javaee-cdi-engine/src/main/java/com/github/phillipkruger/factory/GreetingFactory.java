@@ -3,6 +3,9 @@ package com.github.phillipkruger.factory;
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.api.GreetingProviderLiteral;
 import com.github.phillipkruger.factory.impl.English;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Any;
 import javax.enterprise.inject.Instance;
@@ -24,4 +27,13 @@ public class GreetingFactory {
         }
     }
     
+    public List<Greeting> getAll(){
+        List<Greeting> greetingsList = new ArrayList<>();
+        Iterator<Greeting> greetingIterator = greetings.iterator();
+        while (greetingIterator.hasNext()) {
+            Greeting greeting = greetingIterator.next();
+            greetingsList.add(greeting);
+        }
+        return greetingsList;
+    }
 }

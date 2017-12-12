@@ -6,6 +6,10 @@ import javax.enterprise.context.RequestScoped;
 /**
  * English implementation (Default)
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
+ * 
+ * TODO: Change scope
+ * TODO: Inject other bean
+ * 
  */
 @RequestScoped
 @GreetingProvider("English")

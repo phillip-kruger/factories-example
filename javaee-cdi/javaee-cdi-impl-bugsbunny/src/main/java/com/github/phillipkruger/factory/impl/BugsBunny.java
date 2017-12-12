@@ -3,6 +3,7 @@ package com.github.phillipkruger.factory.impl;
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.api.GreetingProvider;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 
 /**
  * Bugs Bunny implementation
@@ -13,10 +14,13 @@ import javax.enterprise.context.RequestScoped;
 @GreetingProvider("BugsBunny")
 public class BugsBunny implements Greeting {
 
+    @Inject
+    private QuestionmarkGenerator questionmarkGenerator;
+    
     @Override
     public String sayHello(String to) {
         if(to==null || to.isEmpty())to = "Doc";
-        return "Eeee, what's up " + to + " ?";
+        return "Eeee, what's up " + to + " " + questionmarkGenerator.getQuestionmarks();
     }
     
     @Override

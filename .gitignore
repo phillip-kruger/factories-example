@@ -53,3 +53,11 @@ hs_err_pid*
 /payara-cdi/payara-cdi-impl-afrikaans/target/
 /payara-cdi/payara-cdi-impl-bugsbunny/target/
 /payara-cdi/payara-cdi-engine/target/
+/liberty-cdi/javaee-cdi-impl-bugsbunny/target/
+/liberty-cdi/javaee-cdi-impl-afrikaans/target/
+/liberty-cdi/javaee-cdi-api/target/
+/liberty-cdi/javaee-cdi-engine/target/
+/javaee-cdi/javaee-cdi-api/target/
+/javaee-cdi/javaee-cdi-engine/target/
+/javaee-cdi/javaee-cdi-impl-afrikaans/target/
+/javaee-cdi/javaee-cdi-impl-bugsbunny/target/

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.phillip-kruger</groupId>
+        <artifactId>factories-example</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+    <groupId>com.github.phillip-kruger.factory</groupId>
+    <artifactId>javaee-cdi</artifactId>
+    <packaging>pom</packaging>
+    
+    <properties>
+        <jee.version>7.0</jee.version>
+    </properties>
+    
+    <modules>
+        <module>javaee-cdi-impl-bugsbunny</module>
+        <module>javaee-cdi-impl-afrikaans</module>
+        <module>javaee-cdi-api</module>
+        <module>javaee-cdi-engine</module>
+    </modules>
+    
+    <dependencies>
+        <!-- Jave ee -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${jee.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+</project>

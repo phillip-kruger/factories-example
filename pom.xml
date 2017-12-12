@@ -36,10 +36,9 @@
         <module>vanilla</module>
         <module>spi</module>
         <module>cdi</module>
-        <module>liberty-cdi</module>
         <module>swarm-ejb</module>
         <module>dynamic-spi</module>
-        <module>payara-cdi</module>
+        <module>javaee-cdi</module>
     </modules>
     
     <properties>

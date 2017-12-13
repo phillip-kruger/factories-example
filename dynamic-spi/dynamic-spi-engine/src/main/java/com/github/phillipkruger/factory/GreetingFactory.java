@@ -3,7 +3,6 @@ package com.github.phillipkruger.factory;
 import com.github.phillipkruger.factory.api.Greeting;
 import com.github.phillipkruger.factory.impl.English;
 import java.io.File;
-import java.io.FileFilter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;

@@ -39,6 +39,7 @@
         <module>dynamic-spi</module>
         <module>javaee-cdi</module>
         <module>javaee-ejb</module>
+        <module>javaee-spi</module>
     </modules>
     
     <properties>

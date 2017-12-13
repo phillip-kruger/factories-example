@@ -13,8 +13,9 @@ public class GreetingFactory {
     private Instance<Greeting> greetings;
     
     public Greeting getGreeting(String name) {
-        Greeting provider = greetings.select(new GreetingProviderLiteral(name)).get();
-        if(provider!=null){
+        Instance<Greeting> instance = greetings.select(new GreetingProviderLiteral(name));
+        if(!instance.isUnsatisfied()){
+            Greeting provider = instance.get();
             return provider;
         }else{
             return new English();

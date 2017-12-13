@@ -4,7 +4,7 @@ import com.github.phillipkruger.factory.api.Greeting;
 
 /**
  * Implementation for ALiG
- * @see https://youtu.be/b00lc92lExw
+ * @see https://www.youtube.com/watch?v=b00lc92lExw
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  */
 public class AliG implements Greeting {
